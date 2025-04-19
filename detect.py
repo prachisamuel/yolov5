@@ -28,6 +28,13 @@ Usage - formats:
                                  yolov5s_paddle_model       # PaddlePaddle
 """
 
+import platform
+import pathlib
+
+if platform.system() == 'Windows':
+    pathlib.PosixPath = pathlib.WindowsPath
+
+
 import argparse
 import csv
 import os
